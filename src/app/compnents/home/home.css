@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
+
+.landing-container {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  animation: bgFadeIn 2s ease-in-out;
+}
+
+.text-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: zoomIn 1.2s ease-out;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #ffe082;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #cfd8dc;
+}
+
+/* Animations */
+@keyframes bgFadeIn {
+  from {
+    opacity: 0;
+    background: black;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-in-1 {
+  animation: fadeUp 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+.fade-in-2 {
+  animation: fadeUp 1s ease-out 1s forwards;
+  opacity: 0;
+}
+.fade-in-3 {
+  animation: fadeUp 1s ease-out 1.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

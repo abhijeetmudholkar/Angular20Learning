@@ -1,0 +1,39 @@
+<p>ticket-check works!</p>
+<div class="box">
+  <h2>🎬 Movie Ticket Eligibility</h2>
+
+  <input type="text" placeholder="Enter your Name" [(ngModel)]="name" />
+  <input type="number" placeholder="Enter your Age" [(ngModel)]="age" />
+  
+  <select [(ngModel)]="rating">
+    <option value="">-- Select Rating --</option>
+    @for (r of ratings; track r) {
+      <option [value]="r">{{ r }}</option>
+    }
+  </select>
+
+  <hr />
+
+  <h3>🎟️ Result</h3>
+  Name: {{ name }} <br />
+  Age: {{ age }} <br />
+  Rating: {{ rating }} <br />
+
+  @if (age !== null && rating !== '') {
+    @if (rating === 'U') {
+      <p class="eligible">✅ Allowed for all ages</p>
+    } @else if (rating === 'U/A') {
+      @if (age >= 12) {
+        <p class="eligible">✅ Allowed with guardian</p>
+      } @else {
+        <p class="not-eligible">❌ Not allowed under 12</p>
+      }
+    } @else if (rating === 'A') {
+      @if (age >= 18) {
+        <p class="eligible">✅ Allowed (Adult)</p>
+      } @else {
+        <p class="not-eligible">❌ Not allowed below 18</p>
+      }
+    }
+  }
+</div>

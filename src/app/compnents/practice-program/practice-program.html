@@ -1,0 +1,47 @@
+<h1>practice-program !</h1>
+<hr>
+<div class="container">
+<h3>1. Get Subject Marks and Show Total Marks</h3>
+<div>
+    Enter sub 1 marks<input type="number" [(ngModel)]="sub1" [placeholder]="placeholder()">
+    Enter sub 2 marks<input type="number" [(ngModel)]="sub2" [placeholder]="placeholder()">
+    Enter sub 3 marks<input type="number" [(ngModel)]="sub3" [placeholder]="placeholder()">
+</div>
+<br>
+<button (click)="totalMarks()">Total</button>
+<br>
+<div>
+    <h3>Total Marks : {{total}}</h3>
+</div>
+<hr>
+<!-- ==================================================================
+  -->
+<h3>2. Check Number Even or Odd</h3>
+<div>
+    Enter Number<input type="number" [(ngModel)]="checkNo" [placeholder]="placeholder()">
+</div>
+<br>
+<button (click)="checkEvenOdd()">Result</button>
+<br>
+<div>
+    <h3>Result: {{checkResult}}</h3>
+</div>
+<hr>
+<!-- ==================================================================
+  -->
+<h3>3. Simple Calculator</h3>
+<div>
+    Enter 1 Number<input type="number" [(ngModel)]="num1" [placeholder]="placeholder()">
+    Enter 2 Number<input type="number" [(ngModel)]="num2" [placeholder]="placeholder()">
+</div>
+<br>
+<button (click)="plus()">+</button>
+<button (click)="minus()">-</button>
+<button (click)="multi()">*</button>
+<button (click)="div()">/</button>
+<br>
+<div>
+    <h3>Result: {{numTotal}}</h3>
+</div>
+<hr>
+</div>

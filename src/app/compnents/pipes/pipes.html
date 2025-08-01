@@ -1,0 +1,24 @@
+<h1>pipes works!</h1>
+
+<hr>
+<h3>LowerCasePipe</h3>
+<p>Name - {{name}}</p>
+<p>Name - {{name | lowercase}}</p>
+<h3>UpperCasePipe</h3>
+<p>Name - {{name}}</p>
+<p>Name - {{name | uppercase}}</p>
+<h3>TittleCasePipe</h3>
+<p>Name - {{name}}</p>
+<p>Name - {{name | titlecase}}</p>
+<h3>SlicePipe</h3>
+<p>Roll No - {{rollNo}}</p>
+<p>Name - {{rollNo | slice :0:5}}</p>
+<h3>JsonPipe</h3>
+<p>Data - {{data}}</p>
+<p>Data - {{data | json}}</p>
+<h3>DatePipe</h3>
+<p>Date - {{currentDate}}</p>
+<p>Date - {{ currentDate | date}}</p>
+<p>Date - {{ currentDate | date:'dd-MMM-yy'}}</p>
+<p>Date - {{ currentDate | date:'dd-MMM-yyyy'}}</p>
+<p>Date - {{ currentDate | date:'dd-MMMM-yyyy'}}</p>
