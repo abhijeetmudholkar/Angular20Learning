@@ -1,18 +1,53 @@
-input {
-  padding: 10px;
-  margin: 10px;
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* General Section */
+.section {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+  border: 2px solid #dee2e6;
+}
+
+.section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.main-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #343a40;
+  border-bottom: 3px dashed #ffc107;
+  padding-bottom: 10px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+  padding: 12px;
+  margin: 10px 5px;
   font-size: 1.1rem;
-  width: 250px;
   border: 2px solid #888;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  width: 280px;
+  display: inline-block;
 }
+
 input:focus {
   border-color: #ff8800;
   box-shadow: 0 0 8px rgba(255, 136, 0, 0.5);
   outline: none;
 }
 
+/* Eligibility */
 .eligible {
   color: green;
   font-weight: bold;
@@ -22,28 +57,46 @@ input:focus {
 .not-eligible {
   color: red;
   font-weight: bold;
-  animation: shake 0.5s;
+  animation: shake 0.4s;
 }
 
+/* Text Feedback */
+.hint-text {
+  color: #888;
+  font-style: italic;
+}
+
+.error-text {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* Animations */
 @keyframes blink {
   from { opacity: 1; }
   to { opacity: 0.5; }
 }
 
 @keyframes shake {
-  0% { transform: translateX(0px); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0px); }
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
 }
 
+/* Table Status */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
 
-/* ========================================== */
- .demon{
-  height: 100vh;
-  width: 100%;
-  border: 2px solid red;
+.status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
 
- }
- 
+.status.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}

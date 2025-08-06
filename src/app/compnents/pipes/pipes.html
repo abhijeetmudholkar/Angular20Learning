@@ -1,24 +1,73 @@
-<h1>pipes works!</h1>
+<div class="container py-4">
+  <h1 class="main-title mb-4">🧪 Angular Pipes Showcase</h1>
 
-<hr>
-<h3>LowerCasePipe</h3>
-<p>Name - {{name}}</p>
-<p>Name - {{name | lowercase}}</p>
-<h3>UpperCasePipe</h3>
-<p>Name - {{name}}</p>
-<p>Name - {{name | uppercase}}</p>
-<h3>TittleCasePipe</h3>
-<p>Name - {{name}}</p>
-<p>Name - {{name | titlecase}}</p>
-<h3>SlicePipe</h3>
-<p>Roll No - {{rollNo}}</p>
-<p>Name - {{rollNo | slice :0:5}}</p>
-<h3>JsonPipe</h3>
-<p>Data - {{data}}</p>
-<p>Data - {{data | json}}</p>
-<h3>DatePipe</h3>
-<p>Date - {{currentDate}}</p>
-<p>Date - {{ currentDate | date}}</p>
-<p>Date - {{ currentDate | date:'dd-MMM-yy'}}</p>
-<p>Date - {{ currentDate | date:'dd-MMM-yyyy'}}</p>
-<p>Date - {{ currentDate | date:'dd-MMMM-yyyy'}}</p>
+  <div class="row g-4">
+    <!-- LowerCase Pipe -->
+    <div class="col-md-6">
+      <div class="card pipe-card">
+        <div class="card-header bg-dark text-white">LowerCasePipe</div>
+        <div class="card-body">
+          <p>Original: <strong>{{ name }}</strong></p>
+          <p>Lowercase: <span class="text-primary">{{ name | lowercase }}</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- UpperCase Pipe -->
+    <div class="col-md-6">
+      <div class="card pipe-card">
+        <div class="card-header bg-primary text-white">UpperCasePipe</div>
+        <div class="card-body">
+          <p>Original: <strong>{{ name }}</strong></p>
+          <p>Uppercase: <span class="text-success">{{ name | uppercase }}</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TitleCase Pipe -->
+    <div class="col-md-6">
+      <div class="card pipe-card">
+        <div class="card-header bg-info text-white">TitleCasePipe</div>
+        <div class="card-body">
+          <p>Original: <strong>{{ name }}</strong></p>
+          <p>Titlecase: <span class="text-dark">{{ name | titlecase }}</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slice Pipe -->
+    <div class="col-md-6">
+      <div class="card pipe-card">
+        <div class="card-header bg-warning text-dark">SlicePipe</div>
+        <div class="card-body">
+          <p>Original Roll No: <strong>{{ rollNo }}</strong></p>
+          <p>Sliced (0-5): <span class="text-danger">{{ rollNo | slice :0:5 }}</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Json Pipe -->
+    <div class="col-md-6">
+      <div class="card pipe-card">
+        <div class="card-header bg-secondary text-white">JsonPipe</div>
+        <div class="card-body">
+          <p><strong>Raw Data:</strong></p>
+          <code>{{ data | json }}</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Date Pipe -->
+    <div class="col-md-6">
+      <div class="card pipe-card">
+        <div class="card-header bg-success text-white">DatePipe</div>
+        <div class="card-body">
+          <p>Default: <strong>{{ currentDate | date }}</strong></p>
+          <p>Short: <strong>{{ currentDate | date:'dd-MMM-yy' }}</strong></p>
+          <p>Medium: <strong>{{ currentDate | date:'dd-MMM-yyyy' }}</strong></p>
+          <p>Full: <strong>{{ currentDate | date:'dd-MMMM-yyyy' }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

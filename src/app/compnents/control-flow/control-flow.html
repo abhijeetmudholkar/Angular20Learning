@@ -1,175 +1,87 @@
-<h1>Control-Flow Statement</h1>
-<tr>
-    <td>
-<input type="text" [(ngModel)]="month" placeholder="Type month like jan" />
+<div class="container py-5">
+  <h1 class="main-title mb-4">🔁 Angular Control Flow Playground</h1>
 
-  </td>
-    <td><br>
-        <h1>Result : </h1>
-        @if (month==="jan") {
-            <h2>January</h2>
-        }
-        @else if (month=="feb") {
-            <h2>February</h2>
-        }
-        @else if (month=="mar") {
-            <h2>March</h2>
-        }
-        @else if (month=="apr") {
-            <h2>April</h2>
-        }
-        @else if (month=="may") {
-            <h2>May</h2>
-        }
-        @else if (month=="jun") {
-            <h2>June</h2>
-        }
-        @else if (month=="jul") {
-            <h2>July</h2>
-        }
-        @else if (month=="aug") {
-            <h2>August</h2>
-        }
-        @else if (month=="sep") {
-            <h2>September</h2>
-        }
-        @else if (month=="oct") {
-            <h2>Octomber</h2>
-        }
-        @else if (month=="nov") {
-            <h2>November</h2>
-        }
-        @else if (month=="dec") {
-            <h2>December</h2>
-        }
-        @else if (month=="") {
-            <p>Type month like jan</p>
-        }
-        @else {
-            <p>Wrong!</p>
-        }
-    </td>
-</tr>
-<h1>Input Value : {{month}}</h1>
+  <!-- Month Input Section -->
+  <div class="section shadow">
+    <h3>📅 Month Checker</h3>
+    <input type="text" [(ngModel)]="month" placeholder="Type month like jan" />
+    <div class="result-box">
+      <h4>Result:</h4>
+      @if (month === "jan") {
+        <h5>January</h5>
+      } @else if (month === "feb") {
+        <h5>February</h5>
+      } @else if (month === "mar") {
+        <h5>March</h5>
+      } @else if (month === "apr") {
+        <h5>April</h5>
+      } @else if (month === "may") {
+        <h5>May</h5>
+      } @else if (month === "jun") {
+        <h5>June</h5>
+      } @else if (month === "jul") {
+        <h5>July</h5>
+      } @else if (month === "aug") {
+        <h5>August</h5>
+      } @else if (month === "sep") {
+        <h5>September</h5>
+      } @else if (month === "oct") {
+        <h5>October</h5>
+      } @else if (month === "nov") {
+        <h5>November</h5>
+      } @else if (month === "dec") {
+        <h5>December</h5>
+      } @else if (month === "") {
+        <p class="hint-text">Start typing a month abbreviation.</p>
+      } @else {
+        <p class="error-text">❌ Invalid month abbreviation</p>
+      }
+    </div>
+  </div>
 
-<!-- License Eligibility -->
-
-<!-- <div>
-<input type="text" placeholder="Enter your Name" [(ngModel)]="name">
-<input type="number" placeholder="Enter your Age" [(ngModel)]="age">
-<hr>
-<h2>Result</h2><br>
-Name : {{name}} <br>
-Age : {{age}} <br>
-Eligibility : @if (age >=18) {
-    <p>Eligible For Driving</p>
-}@else {
-    <p>Not Eligible for Driving</p>
-}
-
-</div> -->
-<div style="padding: 20px; max-width: 400px; margin: auto; border: 2px dashed #444; border-radius: 12px;">
-  <h2 style="text-align: center;">🚗 RTO Eligibility Form</h2>
-
-  <input type="text" placeholder="Enter your Name" [(ngModel)]="name" />
-  <input type="number" placeholder="Enter your Age" [(ngModel)]="age" />
-
-  <hr />
-
-  <h3>📝 Result</h3>
-  Name: {{ name }} <br />
-  Age: {{ age }} <br />
-  Eligibility:
-  @if (age !== null && age >= 18) {
-    <p class="eligible">✅ Eligible for Driving</p>
-  } @else if (age !== null) {
-    <p class="not-eligible">❌ Not Eligible for Driving</p>
-  }
-</div>
-
-<!-- <table style="border: 2px double black;">
-    <tr>
-        <th>Name</th>
-    </tr>
-    <tr>
-         @for (item of names; track $index) {
-            <tr>{{item}}</tr>
-        }
-    </tr>
-</table> -->
-<!-- <div>
-    <tr>
-        <td>
-            @if(isparaVisible===true){
-                <p>This is Visible Para</p>
-            }
-            @else {
-                <p>content hided</p>
-            }
-        </td>
-        <td>
-            <button (click)="showP()">show</button>
-            <button (click)="hideP()">hide</button>
-        </td>
-    </tr>
-</div> -->
-
-<!-- <div class="demon">
-    <input type="text" [(ngModel)]="character" placeholder="enter character categoury" />
-    <h3>{{character}}</h3>
-
-    <tr>
-        <td>
-            @if(character == 'demon slayer' ){
-                <img src="https://wallpapers.com/images/featured/demon-slayer-4k-pictures-5v5lz47uso2tx2kr.jpg" width="100%" height="200px" alt="demon slayer">
-            }
-            @else if(character == 'demon' ){
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8Xere9U4tl5B0fUPEonkZlfAyThBmL6Jyg&s" width="100%" height="200px" alt="demon ">
-            }
-            @else if(character == 'hashira' ){
-                <img src="https://images7.alphacoders.com/135/1354882.jpeg" alt="hashira" width="100%" height="200px">
-            }
-            @else {
-                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReVoUcROR4EQ0W9ih2_M9pmUUhGN15nMhDxU2M7n3m64JE9jpbQVogv0JcJgSN1A7VyOE&usqp=CAU" alt="hashira" width="100%" height="200px">
-  
-            }
-        </td>
-    </tr>
-
-</div> -->
-
-<!-- <div
-  [style.background-image]="backgroundImageUrl"
-  style="width: 100%; height: 1000px; background-size: cover; background-position: center; padding: 20px;"
->
-  <input type="text" [(ngModel)]="character" placeholder="Enter character category" />
-  <h3 style="color: white;">{{ character }}</h3>
-</div> -->
-
-<table style="border: 2px solid black;">
-    <thead>
-        <tr>
-            <th>Sr No</th>
-            <th>Name</th>
-            <th>City</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-    @for (item of data; track $index) {
-        <tr>
-        <td>{{$index+1}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.city}}</td>
-        <td>
-            @if (item.isActive===true) {
-                <h6>Active</h6>
-            }@else {
-                <h6>Deactive</h6>
-            }
-        </td>
-        </tr>
+  <!-- RTO Eligibility Section -->
+  <div class="section shadow">
+    <h3>🚗 RTO Eligibility Form</h3>
+    <input type="text" placeholder="Enter your Name" [(ngModel)]="name" />
+    <input type="number" placeholder="Enter your Age" [(ngModel)]="age" />
+    <hr />
+    <p>Name: <strong>{{ name }}</strong></p>
+    <p>Age: <strong>{{ age }}</strong></p>
+    @if (age !== null && age >= 18) {
+      <p class="eligible">✅ Eligible for Driving</p>
+    } @else if (age !== null) {
+      <p class="not-eligible">❌ Not Eligible for Driving</p>
     }
-    </tbody>
-    <button class="btn btn-success">dds</button>
-</table>
+  </div>
+
+  <!-- Table Section -->
+  <div class="section shadow">
+    <h3>📋 User Table</h3>
+    <table class="table table-bordered table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of data; track $index) {
+          <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.city }}</td>
+            <td>
+              @if (item.isActive === true) {
+                <span class="status active">Active</span>
+              } @else {
+                <span class="status inactive">Deactive</span>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
