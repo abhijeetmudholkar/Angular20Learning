@@ -1,15 +1,23 @@
 .custom-navbar {
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   transition: background 0.4s ease-in-out;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc107 !important;
 }
 
 .custom-navbar .nav-link {
-  color: #0a0a0a;
-  margin-right: 12px;
+  color: #fff;
+  margin-right: 14px;
   font-weight: 500;
-  transition: all 0.3s ease;
   position: relative;
-  /* dsfsef */
+  white-space: nowrap;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .custom-navbar .nav-link::after {
@@ -32,8 +40,17 @@
   transform: scale(1.05);
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffc107 !important;
+.custom-scroll {
+  scrollbar-width: thin;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #ffc107;
+  border-radius: 10px;
 }

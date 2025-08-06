@@ -13,4 +13,18 @@ import { Home } from "./compnents/home/home";
 })
 export class App {
   protected readonly title = signal('controlFlow');
+
+  navItems = [
+  { label: 'Home', link: '', icon: 'fas fa-home' },
+  { label: 'Practice', link: 'Programs', icon: 'fas fa-laptop-code' },
+  { label: 'Control Flow', link: 'control-flow', icon: 'fas fa-random' },
+  { label: 'Plus/Minus', link: 'plus-minus', icon: 'fas fa-plus-minus' },
+  { label: 'Ticket Check', link: 'ticket-check', icon: 'fas fa-ticket-alt' },
+  { label: 'Attribute Dir', link: 'AttDirective', icon: 'fas fa-magic' },
+  { label: 'Pipes', link: 'pipes', icon: 'fas fa-filter' },
+  { label: 'Get API', link: 'Get-API', icon: 'fas fa-database' },
+  { label: 'User', link: 'user', icon: 'fas fa-users' },
+  { label: 'More', link: 'more', icon: 'fas fa-ellipsis-h' } // Add more dynamically
+];
+
 }

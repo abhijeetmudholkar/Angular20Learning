@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top custom-navbar">
+<nav class="navbar navbar-expand-lg sticky-top custom-navbar shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" routerLink="">
       <i class="fas fa-code me-2"></i> Angular 20
@@ -9,34 +9,14 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink=""><i class="fas fa-home me-1"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="Programs"><i class="fas fa-laptop-code me-1"></i> Practice</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="control-flow"><i class="fas fa-random me-1"></i> Control Flow</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="plus-minus"><i class="fas fa-plus-minus me-1"></i> Plus/Minus</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="ticket-check"><i class="fas fa-ticket-alt me-1"></i> Ticket Check</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="AttDirective"><i class="fas fa-magic me-1"></i> Attribute Dir</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="pipes"><i class="fas fa-filter me-1"></i> Pipes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="Get-API"><i class="fas fa-database me-1"></i> Get API</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="user"><i class="fas fa-database me-1"></i> user</a>
-        </li>
+      <ul class="navbar-nav ms-auto flex-nowrap overflow-auto custom-scroll px-2">
+        @for (item of navItems; track item.label) {
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="item.link">
+      <i [class]="item.icon + ' me-1'"></i> {{ item.label }}
+    </a>
+  </li>
+}
       </ul>
     </div>
   </div>
