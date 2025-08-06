@@ -1,3 +1,9 @@
-<h1>Increament and Decreament</h1>
+<div class="counter-container">
+  <h1>Increment and Decrement</h1>
 
-<button (click)="minus()">-</button><h2>Value : {{value}}</h2><button (click)="plus()">+</button>
+  <div class="counter-box">
+    <button class="btn-control" (click)="minus()">-</button>
+    <h2 class="counter-value">Value: {{ value }}</h2>
+    <button class="btn-control" (click)="plus()">+</button>
+  </div>
+</div>
