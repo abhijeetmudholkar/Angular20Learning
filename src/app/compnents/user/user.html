@@ -1,0 +1,88 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">userObj Details Form</h5>
+    </div>
+    <div class="card-body">
+        
+        <input type="hidden" name="userObjId" [(ngModel)]="userObj.userId" />
+
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="fullName"
+            [(ngModel)]="userObj.fullName"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email ID</label>
+          <input
+            type="email"
+            class="form-control"
+            name="emailId"
+            [(ngModel)]="userObj.emailId"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Mobile Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            name="mobileNo"
+            [(ngModel)]="userObj.mobileNo"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            [(ngModel)]="userObj.password"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success" (click)="postUser()">
+          Submit
+        </button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h4 class="mb-3">User List</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>User ID</th>
+          <th>Full Name</th>
+          <th>Email ID</th>
+          <th>Mobile No</th>
+          <th>Password</th> <!-- Avoid showing this in real apps -->
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of userList; track user.userId) {
+          <tr>
+            <td>{{ user.userId +1}}</td>
+            <td>{{ user.fullName }}</td>
+            <td>{{ user.emailId }}</td>
+            <td>{{ user.mobileNo }}</td>
+            <td>{{ user.password }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+

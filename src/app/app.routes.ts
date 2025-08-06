@@ -7,6 +7,7 @@ import { AttDirective } from './compnents/att-directive/att-directive';
 import { Pipes } from './compnents/pipes/pipes';
 import { GetAPI } from './compnents/get-api/get-api';
 import { PracticeProgram } from './compnents/practice-program/practice-program';
+import { User } from './compnents/user/user';
 
 export const routes: Routes = [
     {
@@ -43,6 +44,11 @@ export const routes: Routes = [
     {
         path:'Programs',
         component:PracticeProgram
+
+    },
+    {
+        path:'user',
+        component:User
 
     },
 ];
