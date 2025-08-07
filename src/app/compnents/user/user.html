@@ -50,10 +50,19 @@
             required
           />
         </div>
-
-        <button type="submit" class="btn btn-success" (click)="postUser()">
+        <button type="submit" class="btn btn-success" (click)="reset()">
+          Reset
+        </button>
+        @if(userObj.userId==0){
+          <button type="submit" class="btn btn-success" (click)="postUser()">
           Submit
         </button>
+        }@else {
+           <button type="submit" class="btn btn-warning" (click)="putUser()">
+          Update
+        </button>
+        }
+        
     </div>
   </div>
 </div>
@@ -69,6 +78,7 @@
           <th>Email ID</th>
           <th>Mobile No</th>
           <th>Password</th> <!-- Avoid showing this in real apps -->
+          <th>Action</th> <!-- Avoid showing this in real apps -->
         </tr>
       </thead>
       <tbody>
@@ -79,6 +89,11 @@
             <td>{{ user.emailId }}</td>
             <td>{{ user.mobileNo }}</td>
             <td>{{ user.password }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editUser(user)">Edit</button>
+              <!-- <button class="btn btn-danger" (click)="deleteUser( user.userId)">Delete</button> -->
+               <button class="btn btn-danger" (click)="deleteUser(user.userId)">Delete</button>
+            </td>
           </tr>
         }
       </tbody>
