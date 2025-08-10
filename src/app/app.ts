@@ -24,6 +24,7 @@ export class App {
   { label: 'Pipes', link: 'pipes', icon: 'fas fa-filter' },
   { label: 'Get API', link: 'Get-API', icon: 'fas fa-database' },
   { label: 'User', link: 'user', icon: 'fas fa-users' },
+  { label: 'ReactiveForm', link: 'reactive-form', icon: 'fas fa-users' },
   { label: 'More', link: 'more', icon: 'fas fa-ellipsis-h' } // Add more dynamically
 ];
 

@@ -8,6 +8,7 @@ import { Pipes } from './compnents/pipes/pipes';
 import { GetAPI } from './compnents/get-api/get-api';
 import { PracticeProgram } from './compnents/practice-program/practice-program';
 import { User } from './compnents/user/user';
+import { ReactiveForm } from './compnents/reactive-form/reactive-form';
 
 export const routes: Routes = [
     {
@@ -49,6 +50,11 @@ export const routes: Routes = [
     {
         path:'user',
         component:User
+
+    },
+    {
+        path:'reactive-form',
+        component:ReactiveForm
 
     },
 ];
