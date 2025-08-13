@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+  <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+    <div class="text-center mb-4">
+      <i class="fas fa-user-circle fa-4x text-primary"></i>
+      <h4 class="mt-2">Login</h4>
+    </div>
+
+    <form>
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Email address</label>
+        <input type="email" [(ngModel)]="logObj.username" name="username" class="form-control" placeholder="Enter email">
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" [(ngModel)]="logObj.password" name="password" class="form-control" placeholder="Enter password">
+      </div>
+
+      <!-- Remember Me -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="rememberMe">
+        <label class="form-check-label" for="rememberMe">
+          Remember me
+        </label>
+      </div>
+
+      <!-- Login Button -->
+      <button type="button" (click)="onLogin()" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
+</div>

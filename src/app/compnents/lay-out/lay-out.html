@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg sticky-top custom-navbar shadow-sm">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="">
+      <i class="fas fa-code me-2"></i> Angular 20
+    </a>
+
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu items -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      @if(loggedUserName != ""){
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" routerLink="">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="Programs">Practice</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="control-flow">Control Flow</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="plus-minus">Plus/Minus</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="ticket-check">Ticket Check</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="AttDirective">Attribute Dir</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="pipes">Pipes</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="Get-API">Get API</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="user">User</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="reactive-form">Reactive Form</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="more">More</a></li>
+      </ul>
+}
+      <!-- Login Button -->
+      <div class="d-flex mt-2 mt-lg-0">
+        @if(loggedUserName == ""){
+          <button class="btn btn-primary" routerLink="login">
+          <i class="fas fa-sign-in-alt me-1"></i> Login
+        </button>
+        }
+        @else {
+          <button class="btn btn-danger" (click)="logOut()">LogOut</button>
+        }
+        
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -9,52 +9,63 @@ import { GetAPI } from './compnents/get-api/get-api';
 import { PracticeProgram } from './compnents/practice-program/practice-program';
 import { User } from './compnents/user/user';
 import { ReactiveForm } from './compnents/reactive-form/reactive-form';
+import { Login } from './compnents/login/login';
+import { LayOut } from './compnents/lay-out/lay-out';
 
 export const routes: Routes = [
-    {
-        path:'',
-        component:Home
-    },
-    {
-        path:'control-flow',
-        component:ControlFlowComponent
-    },
-    {
-        path:'plus-minus',
-        component:PlusMinus
-    },
-    {
-        path:'ticket-check',
-        component:TicketCheck
-    },
-    {
-        path:'AttDirective',
-        component:AttDirective
-
-    },
-    {
-        path:'pipes',
-        component:Pipes
-
-    },
-    {
-        path:'Get-API',
-        component:GetAPI
-
-    },
-    {
-        path:'Programs',
-        component:PracticeProgram
-
-    },
-    {
-        path:'user',
-        component:User
-
-    },
-    {
-        path:'reactive-form',
-        component:ReactiveForm
-
-    },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: Login,
+  },
+  {
+    path: '',
+    component: LayOut,
+    children: [
+      {
+        path: 'home',
+        component: Home,
+      },
+      {
+        path: 'control-flow',
+        component: ControlFlowComponent,
+      },
+      {
+        path: 'plus-minus',
+        component: PlusMinus,
+      },
+      {
+        path: 'ticket-check',
+        component: TicketCheck,
+      },
+      {
+        path: 'AttDirective',
+        component: AttDirective,
+      },
+      {
+        path: 'pipes',
+        component: Pipes,
+      },
+      {
+        path: 'Get-API',
+        component: GetAPI,
+      },
+      {
+        path: 'Programs',
+        component: PracticeProgram,
+      },
+      {
+        path: 'user',
+        component: User,
+      },
+      {
+        path: 'reactive-form',
+        component: ReactiveForm,
+      },
+    ],
+  },
 ];
