@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(120deg, #f8f9fa, #e0eafc);
+}
+
+.login-container {
+  height: 100vh;
+}
+
+.login-card {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 12px;
+  animation: slideDown 0.5s ease;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+
+.btn-primary {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
